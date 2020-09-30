@@ -1,0 +1,33 @@
+@startuml
+class Restaurant{
+    name STRING
+    image STRING
+    cuisine STRING
+    menus Array<Menu>
+    capacity Array<Table>
+    addMenu()
+    addTable()
+}
+
+class Table{
+    number INTERGER
+    seats INTERGER
+}
+
+
+class Menu{
+    name STRING
+    type STRING
+    items Array<Item>
+    addItem()
+}
+
+class Item{
+    name STRING
+    price FLOAT
+}
+
+Restaurant--{Menu
+Restaurant--{Table
+Menu--{Item
+@enduml
